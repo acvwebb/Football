@@ -12,7 +12,6 @@ root = lxml.html.fromstring(html)
 names = root.cssselect("td div a")
 for name in names: 
   print name.attrib['href']
-  record['link'] = name.attrib['href']
 
 #
 # # Write out to the sqlite database using scraperwiki library
