@@ -11,7 +11,7 @@ html = scraperwiki.scrape("https://uk.soccerway.com/teams/england/chelsea-footba
 root = lxml.html.fromstring(html)
 names = root.cssselect("td div a")
 for name in names: 
-  print names.text
+  print name.text
   print name.attrib['href']
 
 #
