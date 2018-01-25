@@ -5,11 +5,11 @@ import scraperwiki
 import lxml.html
 #
 # # Read in a page
-html = scraperwiki.scrape("https://www.facebook.com/amelia.c.webb/friends?pnref=lhc")
+html = scraperwiki.scrape("https://uk.soccerway.com/teams/england/chelsea-football-club/661/")
 #
 # # Find something on the page using css selectors
 root = lxml.html.fromstring(html)
-names = root.cssselect("ul/li[1]/div/div/div[2]/div/div[2]/div")
+names = root.cssselect("td div a")
 for name in names: 
   print name.text
   print name.attrib['href']
