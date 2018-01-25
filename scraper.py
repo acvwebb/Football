@@ -16,6 +16,7 @@ for name in names:
   print name.text.encode('ascii', 'ignore')
   print name.attrib['href']
   record['link'] = name.attrib['href'] 
+  record['name'] = name.text.encode('ascii', 'ignore')
   print record
   scraperwiki.sqlite.save(unique_keys=['link'], data=record)
 
